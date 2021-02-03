@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-input_string = 'Hello'
+input_string = 'Ciao'
 print(type(input_string))
 input_bytes_encoded = input_string.encode()
 print(type(input_bytes_encoded))
@@ -22,7 +22,11 @@ sock_service.connect((SERVER_ADDRESS, SERVER_PORT))
 print("Connesso a " + str((SERVER_ADDRESS, SERVER_PORT)))
 while True:
     try:
-        dati = input("Inserisci i dati da inviare (0 per terminare la connessione): ")
+        n1 = input("Inserisci il primo numero: ")
+        n2 = input("Inserisci il secondo numero: ")
+        oper = input("Inserisci l'operazione da effettuare(piu / meno / per / diviso): ")
+        dati=f"{oper};{n1};{n2}"
+
     except EOFError:
         print("\nOkay. Exit")
         break
