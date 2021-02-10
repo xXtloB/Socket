@@ -7,7 +7,7 @@ SERVER_ADDRESS = '127.0.0.1'
 
 SERVER_PORT = 22224
 
-def ricevi_comandi(sock_listen):
+def ricevi_comandi(sock_listen):#in questa funzione inserisco il ciclo in loop che attende dati dal client e che invia la risposta
     while True:
         sock_service, addr_client = sock_listen.accept()
         print("\nConnessione ricevuta da " + str(addr_client))
@@ -48,7 +48,7 @@ def ricevi_comandi(sock_listen):
 
         sock_service.close()
 
-def avvia_server(indirizzo,porta):
+def avvia_server(indirizzo,porta):#In questa funzione inserisco tutti i comandi relativi alla creazione e avvio del server
     sock_listen = socket.socket()
 
     sock_listen.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)

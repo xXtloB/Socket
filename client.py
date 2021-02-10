@@ -5,7 +5,7 @@ import socket
 SERVER_ADDRESS = '127.0.0.1'
 SERVER_PORT = 22224
 
-def invia_comandi(sock_service):
+def invia_comandi(sock_service):#Chiedo i dati al client in un ciclo e poi li invio al server
     while True:
         try:
             n1 = input("Inserisci il primo numero: ")
@@ -40,7 +40,7 @@ def invia_comandi(sock_service):
 
         sock_service.close()
 
-def connessione_server(address,port):
+def connessione_server(address,port):#in questa funzione inserisco tutti i comandi riguardanti la connessione al server
 
     sock_service = socket.socket()
 
