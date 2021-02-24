@@ -4,7 +4,7 @@ import socket
 
 SERVER_ADDRESS = '127.0.0.1'
 SERVER_PORT = 22224
-
+a
 def invia_comandi(sock_service):#Chiedo i dati al client in un ciclo e poi li invio al server
     while True:
         try:
